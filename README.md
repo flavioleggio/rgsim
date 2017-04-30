@@ -28,3 +28,20 @@ or you can try to load a preset world with a pioneer2dx model with the command
 ```
 gazebo worlds/pioneer2dx.world
 ```
+
+### **Start the simulation**
+First you have to export the environment variables for models and worlds.
+If rgsim is in your home
+```
+export GAZEBO_MODEL_PATH=~/rgsim/models
+export GAZEBO_RESOURCE_PATH=~/rgsim/worlds
+```
+If it is inside another workspace
+```
+export GAZEBO_MODEL_PATH=<workspace_path>/rgsim/models
+export GAZEBO_RESOURCE_PATH=<workspace_path>/rgsim/worlds
+```
+To run the simulation you can enter the command
+```
+gazebo worlds/rgsim.world
+```
