@@ -484,13 +484,17 @@
           </dynamics>
         </axis>
       </joint>
+      <plugin name='motor_plugin' filename='libmotor_plugin.so'>
+        <topic>~/motors_control</topic>
+        <multiplier>1</multiplier>
+      </plugin>
       <pose frame=''>1 1 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>16 681000000</sim_time>
-      <real_time>16 999246653</real_time>
-      <wall_time>1493566689 192258776</wall_time>
-      <iterations>16681</iterations>
+      <sim_time>38 563000000</sim_time>
+      <real_time>39 302560070</real_time>
+      <wall_time>1493759160 980526363</wall_time>
+      <iterations>38563</iterations>
       <model name='arena'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -526,31 +530,31 @@
         </link>
       </model>
       <model name='robot'>
-        <pose frame=''>0.999936 1.0003 -2.8e-05 -0.00018 0.000216 0.000589</pose>
+        <pose frame=''>0.998424 1.00337 -3.2e-05 -6.4e-05 0.000137 0.038734</pose>
         <scale>1 1 1</scale>
         <link name='chassis'>
-          <pose frame=''>0.999957 1.00032 0.099972 -0.00018 0.000216 0.000589</pose>
-          <velocity>-0.000571 0.001846 -0.000793 -0.07875 0.068138 0.030027</velocity>
-          <acceleration>-0.749114 -0.164738 0.141804 -0.146879 1.06087 1.49784</acceleration>
-          <wrench>-5.99291 -1.3179 1.13443 0 -0 0</wrench>
+          <pose frame=''>0.998437 1.00338 0.099968 -6.4e-05 0.000137 0.038734</pose>
+          <velocity>0.000179 0.000641 -0.002722 0.015972 -0.083878 -0.019309</velocity>
+          <acceleration>0.945669 1.92848 -3.21319 -1.62807 -1.22503 -3.00562</acceleration>
+          <wrench>7.56535 15.4279 -25.7055 0 -0 0</wrench>
         </link>
         <link name='hokuyo::link'>
-          <pose frame=''>1.19998 1.00045 0.199924 9e-06 7.7e-05 0.000584</pose>
-          <velocity>0.006321 0.015494 -0.015017 -0.001412 0.003375 0.00012</velocity>
-          <acceleration>12.1297 20.0456 -26.7912 -2.3324 -0.521149 -1.81149</acceleration>
-          <wrench>1.21297 2.00456 -2.67912 0 -0 0</wrench>
+          <pose frame=''>1.1983 1.01113 0.199937 -1.2e-05 6.5e-05 0.038756</pose>
+          <velocity>-0.008123 -0.005621 0.014841 -0.000437 -0.003403 0.006828</velocity>
+          <acceleration>-16.7342 9.0627 32.0242 -1.94492 1.41711 -1.50606</acceleration>
+          <wrench>-1.67342 0.90627 3.20242 0 -0 0</wrench>
         </link>
         <link name='left_wheel'>
-          <pose frame=''>1.09988 1.13037 0.099985 1.61067 1.56904 -3.10121</pose>
-          <velocity>-0.003886 0.00508 -0.015834 -0.079761 0.02963 0.027086</velocity>
-          <acceleration>-7.65163 5.91986 -16.6054 -0.493222 -0.040646 2.06579</acceleration>
-          <wrench>-12.0192 9.29891 -26.0838 0 -0 0</wrench>
+          <pose frame=''>1.09333 1.13715 0.100001 1.56913 1.55127 -3.10463</pose>
+          <velocity>0.002518 -0.001243 0.001858 0.012926 0.02079 -0.017526</velocity>
+          <acceleration>-1.09593 2.1665 2.3839 1.68243 -0.077049 -2.18427</acceleration>
+          <wrench>-1.72149 3.40313 3.74463 0 -0 0</wrench>
         </link>
         <link name='right_wheel'>
-          <pose frame=''>1.10003 0.870379 0.100001 1.56179 1.56643 3.1331</pose>
-          <velocity>0.00305 0.004046 -0.000528 -0.040561 0.036557 0.024201</velocity>
-          <acceleration>6.69312 4.62409 -0.373546 -1.90483 -0.714964 1.57579</acceleration>
-          <wrench>10.5136 7.26351 -0.586766 0 -0 0</wrench>
+          <pose frame=''>1.1034 0.877351 0.100001 1.56971 1.49634 -3.10402</pose>
+          <velocity>-0.003069 -0.000511 0.008916 0.004338 -0.031087 -0.009085</velocity>
+          <acceleration>1.40793 4.61786 19.7309 -1.93365 -0.445452 -3.02594</acceleration>
+          <wrench>2.21157 7.25373 30.9933 0 -0 0</wrench>
         </link>
       </model>
       <light name='sun'>

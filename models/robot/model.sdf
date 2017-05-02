@@ -172,5 +172,10 @@
         </limit>
       </axis>
     </joint>
+
+    <plugin name="motor_plugin" filename="libmotor_plugin.so">
+      <topic>~/motors_control</topic>
+      <multiplier>1</multiplier>
+    </plugin>
   </model>
 </sdf>
