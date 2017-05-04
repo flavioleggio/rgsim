@@ -51,3 +51,8 @@ To run the simulation you can enter the command
 ```
 gazebo worlds/rgsim.world
 ```
+
+Another way to run the whole simulation is to execute the script runsim.sh
+```
+./runsim.sh
+```
