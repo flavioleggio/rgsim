@@ -9,21 +9,21 @@
 
       <inertial>
         <pose>0 0 0 0 0 0</pose>
-        <mass>8</mass>
+        <mass>5</mass>
         <inertia>
-          <ixx>0.000266666666667</ixx>
+          <ixx>0.11125</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.00106666666667</iyy>
+          <iyy>0.104166666667</iyy>
           <iyz>0</iyz>
-          <izz>0.00426666666667</izz>
+          <izz>0.0635416666667</izz>
         </inertia>
       </inertial>
 
       <collision name="collision">
         <geometry>
           <box>
-            <size>.4 .2 .1</size>
+            <size>.3 .25 .4</size>
           </box>
         </geometry>
       </collision>
@@ -32,13 +32,13 @@
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <box>
-            <size>.4 .2 .1</size>
+            <size>.3 .25 .4</size>
           </box>
         </geometry>
       </visual>
 
       <collision name="caster_collision">
-        <pose>-0.15 0 -0.05 0 0 0</pose>
+        <pose>-0.075 0 -0.2 0 0 0</pose>
         <geometry>
           <sphere>
             <radius>.05</radius>
@@ -58,7 +58,7 @@
       </collision>
 
       <visual name="caster_visual">
-        <pose>-0.15 0 -0.05 0 0 0</pose>
+        <pose>-0.075 0 -0.2 0 0 0</pose>
         <geometry>
           <sphere>
             <radius>.05</radius>
@@ -68,9 +68,10 @@
     </link>
 
     <link name="left_wheel">
-      <pose>0.1 0.13 0.1 0 1.5707 1.5707</pose>
+      <pose>0.1 0.13 -0.1 0 1.5707 1.5707</pose>
       <gravity>true</gravity>
 
+      <!--
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>1.5708</mass>
@@ -83,11 +84,12 @@
           <izz>0.007853981634</izz>
         </inertia>
       </inertial>
+      -->
 
       <collision name="collision">
         <geometry>
           <cylinder>
-            <radius>.1</radius>
+            <radius>.05</radius>
             <length>.05</length>
           </cylinder>
         </geometry>
@@ -96,7 +98,7 @@
       <visual name="visual">
         <geometry>
           <cylinder>
-            <radius>.1</radius>
+            <radius>.05</radius>
             <length>.05</length>
           </cylinder>
         </geometry>
@@ -113,9 +115,10 @@
     </joint>
 
     <link name="right_wheel">
-      <pose>0.1 -0.13 0.1 0 1.5707 1.5707</pose>
+      <pose>0.1 -0.13 -0.1 0 1.5707 1.5707</pose>
       <gravity>true</gravity>
 
+      <!--
       <inertial>
         <pose>0 0 0 0 0 0</pose>
         <mass>1.5708</mass>
@@ -128,11 +131,12 @@
           <izz>0.007853981634</izz>
         </inertia>
       </inertial>
+      -->
 
       <collision name="collision">
         <geometry>
           <cylinder>
-            <radius>.1</radius>
+            <radius>.05</radius>
             <length>.05</length>
           </cylinder>
         </geometry>
@@ -141,7 +145,7 @@
       <visual name="visual">
         <geometry>
           <cylinder>
-            <radius>.1</radius>
+            <radius>.05</radius>
             <length>.05</length>
           </cylinder>
         </geometry>
@@ -157,6 +161,7 @@
       </axis>
     </joint>
 
+    <!--
     <include>
       <uri>model://hokuyo</uri>
       <pose>0.2 0 0.2 0 0 0</pose>
@@ -172,6 +177,7 @@
         </limit>
       </axis>
     </joint>
+    -->
 
     <plugin name="motor_plugin" filename="libmotor_plugin.so">
       <topic>~/motors_control</topic>
