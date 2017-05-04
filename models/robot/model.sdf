@@ -11,12 +11,12 @@
         <pose>0 0 0 0 0 0</pose>
         <mass>5</mass>
         <inertia>
-          <ixx>0.11125</ixx>
+          <ixx>0.092708</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.104166666667</iyy>
+          <iyy>0.104167</iyy>
           <iyz>0</iyz>
-          <izz>0.0635416666667</izz>
+          <izz>0.063542</izz>
         </inertia>
       </inertial>
 
@@ -71,20 +71,18 @@
       <pose>0.1 0.13 -0.1 0 1.5707 1.5707</pose>
       <gravity>true</gravity>
 
-      <!--
       <inertial>
         <pose>0 0 0 0 0 0</pose>
-        <mass>1.5708</mass>
+        <mass>0.3</mass>
         <inertia>
-          <ixx>0.004254240052</ixx>
+          <ixx>0.00025</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.004254240052</iyy>
+          <iyy>0.00025</iyy>
           <iyz>0</iyz>
-          <izz>0.007853981634</izz>
+          <izz>0.000375</izz>
         </inertia>
       </inertial>
-      -->
 
       <collision name="collision">
         <geometry>
@@ -118,20 +116,18 @@
       <pose>0.1 -0.13 -0.1 0 1.5707 1.5707</pose>
       <gravity>true</gravity>
 
-      <!--
       <inertial>
         <pose>0 0 0 0 0 0</pose>
-        <mass>1.5708</mass>
+        <mass>0.3</mass>
         <inertia>
-          <ixx>0.004254240052</ixx>
+          <ixx>0.00025</ixx>
           <ixy>0</ixy>
           <ixz>0</ixz>
-          <iyy>0.004254240052</iyy>
+          <iyy>0.00025</iyy>
           <iyz>0</iyz>
-          <izz>0.007853981634</izz>
+          <izz>0.000375</izz>
         </inertia>
       </inertial>
-      -->
 
       <collision name="collision">
         <geometry>
