@@ -17,7 +17,7 @@ int main(int argc, char** argv)
   transport::init();
   transport::run();
   transport::NodePtr node(new transport::Node());
-  node->Init("default");
+  node->Init("rgsim");
 
   transport::PublisherPtr pub = node->Advertise<msgs::MotorsCommand>("~/motors_control");
   pub->WaitForConnection();

@@ -30,6 +30,13 @@ gazebo worlds/pioneer2dx.world
 ```
 
 ### **Start the simulation**
+To run the whole simulation you can simply execute the bash script runsim.sh
+```
+./runsim.sh
+```
+
+The script executes in your place the standard procedure for running a simulation.
+Just for reference purposes, the **procedure** is explained below.
 First you have to set up the environment variables.
 ```
 source /usr/share/gazebo/setup.sh
@@ -50,9 +57,4 @@ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:<workspace_path>/rgsim/build/mod
 To run the simulation you can enter the command
 ```
 gazebo worlds/rgsim.world
-```
-
-Another way to run the whole simulation is to execute the script runsim.sh
-```
-./runsim.sh
 ```
