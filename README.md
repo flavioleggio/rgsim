@@ -29,9 +29,19 @@ or you can try to load a preset world with a pioneer2dx model with the command
 gazebo worlds/pioneer2dx.world
 ```
 
+### **Compile the project**
+```
+cd ~/path/to/rgsim/
+mkdir build
+cd build/
+cmake ..
+make
+```
+
 ### **Start the simulation**
 To run the whole simulation you can simply execute the bash script runsim.sh
 ```
+cd ~/path/to/rgsim/
 ./runsim.sh
 ```
 
@@ -42,17 +52,10 @@ First you have to set up the environment variables.
 source /usr/share/gazebo/setup.sh
 ```
 Then you have to export the environment variables for models and worlds.
-If rgsim is in your home
 ```
-export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:~/rgsim/models
-export GAZEBO_RESOURCE_PATH=${GAZEBO_RESOURCE_PATH}:~/rgsim/worlds
-export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/rgsim/build/models/robot
-```
-If it is inside another workspace
-```
-export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:<workspace_path>/rgsim/models
-export GAZEBO_RESOURCE_PATH=${GAZEBO_RESOURCE_PATH}:<workspace_path>/rgsim/worlds
-export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:<workspace_path>/rgsim/build/models/robot
+export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:~/path/to/rgsim/models
+export GAZEBO_RESOURCE_PATH=${GAZEBO_RESOURCE_PATH}:~/path/to/rgsim/worlds
+export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/path/to/rgsim/build/models/robot
 ```
 To run the simulation you can enter the command
 ```
