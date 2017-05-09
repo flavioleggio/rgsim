@@ -11,8 +11,8 @@ using namespace gazebo;
 int main(int argc, char** argv)
 {
   msgs::MotorsCommand msg;
-  msg.set_left_torque(0.1);
-  msg.set_right_torque(0.1);
+  msg.set_left_torque(0.001);
+  msg.set_right_torque(0.001);
 
   transport::init();
   transport::run();

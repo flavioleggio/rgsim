@@ -2,7 +2,6 @@
 
 #include <string>
 
-#include <boost/algorithm/string/replace.hpp>
 #include <gazebo/common/common.hh>
 #include <gazebo/gazebo.hh>
 #include <gazebo/physics/physics.hh>

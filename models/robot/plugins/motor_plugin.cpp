@@ -13,17 +13,9 @@ void DCMotor::Load(physics::ModelPtr model, sdf::ElementPtr sdf) {
   left_joint = model->GetJoint("left_wheel_hinge");
   right_joint = model->GetJoint("right_wheel_hinge");
 
-  if (sdf->HasElement("topic")) {
-    topic = sdf->Get<std::string>("topic");
-  } else { // implementa topic di default
-    topic = "~/" + sdf->GetAttribute("name")->GetAsString();
-  }
+  topic = "~/motors_control";
 
-  if (sdf->HasElement("multiplier")) {
-    multiplier = sdf->Get<float>("multiplier");
-  } else { // implementa multiplier di default
-    multiplier = 1;
-  }
+  multiplier = sdf->Get<float>("multiplier");
 
   gzmsg << "Initializing motor: " << topic
         << " left_joint=" << left_joint->GetName()
@@ -47,7 +39,8 @@ void DCMotor::Update(const common::UpdateInfo& info) {
 
 void DCMotor::Callback(const ConstMotorsCommandPtr& msg) {
   left_signal = msg->left_torque();
-  gzmsg << "left_signal set to " << left_signal << std::endl;
+
+  //gzmsg << "left_signal set to " << left_signal << std::endl;
   if (left_signal < -1) {
     left_signal = -1;
   } else if (left_signal > 1) {
@@ -55,7 +48,8 @@ void DCMotor::Callback(const ConstMotorsCommandPtr& msg) {
   }
 
   right_signal = msg->right_torque();
-  gzmsg << "right_signal set to " << right_signal << std::endl;
+
+  //gzmsg << "right_signal set to " << right_signal << std::endl;
   if (right_signal < -1) {
     right_signal = -1;
   } else if (right_signal > 1) {
