@@ -1,0 +1,9 @@
+package gazebo.msgs;
+
+message EncoderMsg
+{
+  required float left_angle     = 1;
+  required float right_angle    = 2;
+  required float left_velocity  = 3;
+  required float right_velocity = 4;
+}

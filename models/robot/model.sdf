@@ -175,6 +175,10 @@
     </joint>
     -->
 
+    <plugin name="encoder" filename="libencoder_plugin.so">
+      <topic>~/encoders</topic>
+    </plugin>
+
     <plugin name="motor_plugin" filename="libmotor_plugin.so">
       <topic>~/motors_control</topic>
       <multiplier>1</multiplier>

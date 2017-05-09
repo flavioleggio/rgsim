@@ -7,9 +7,13 @@ foreach(ITR ${GAZEBO_INCLUDE_DIRS})
   endif()
 endforeach()
 
-set(msgs MotorsCommand.proto)
+set(encoders_proto EncoderMsg.proto)
+set(motors_proto MotorsCommand.proto)
 
-protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS ${msgs})
+protobuf_generate_cpp(ENCODERS_SRCS ENCODERS_HDRS ${encoders_proto})
+protobuf_generate_cpp(MOTORS_SRCS MOTORS_HDRS ${motors_proto})
 
-add_library(motors_command_msgs SHARED ${PROTO_SRCS})
+add_library(encoders_msgs SHARED ${ENCODERS_SRCS})
+add_library(motors_command_msgs SHARED ${MOTORS_SRCS})
+target_link_libraries(encoders_msgs ${PROTOBUF_LIBRARY})
 target_link_libraries(motors_command_msgs ${PROTOBUF_LIBRARY})
