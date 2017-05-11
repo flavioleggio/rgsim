@@ -20,7 +20,7 @@ sudo dnf install gazebo-devel-7.4.0-2.fc25.x86_64
 You can find the correct version for your distribution on the official [gazebosim website](http://gazebosim.org/tutorials?cat=install)
 
 ### **Verify your installation**
-To verify if gazebo has been correctly installed on your system, you can start gazebo by entering on a terminal the simple command
+To verify if Gazebo has been correctly installed on your system, you can start Gazebo by entering on a terminal the simple command
 ```
 gazebo
 ```
@@ -60,4 +60,19 @@ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/path/to/rgsim/build/models/rob
 To run the simulation you can enter the command
 ```
 gazebo worlds/rgsim.world
+```
+
+### **Try test tools**
+While Gazebo is running, you can execute the test tools to control the robot and to read the encoders output.
+
+The motors_test tool applies a constant torque to both the motor wheels to makes the robot move forward; to run it open a new terminal inside the main rgsim directory and type
+```
+cd build/tools
+./motors_test
+```
+
+The telem_test tool reads the encoder samples each 500ms and prints them on the screen; to run it open a new terminal inside the main rgsim directory and type
+```
+cd build/tools
+./telem_test
 ```
