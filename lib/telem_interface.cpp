@@ -13,6 +13,15 @@ TelemInterface::TelemInterface()
   sub = node->Subscribe("~/encoders", &TelemInterface::telemCallback, this);
 }
 
+void TelemInterface::get_sample(float* ts, int* left_ticks, int* right_ticks, float* left_velocity, float* right_velocity)
+{
+  *ts = m_ts;
+  *left_ticks = m_left_ticks;
+  *right_ticks = m_right_ticks;
+  *left_velocity = m_left_velocity;
+  *right_velocity = m_right_velocity;
+}
+
 void TelemInterface::print()
 {
   printf("Timestamp = %f, Left ticks = %d, Right ticks = %d, Left velocity = %f, Right velocity = %f\n", \
