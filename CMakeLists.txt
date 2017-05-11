@@ -13,4 +13,5 @@ include_directories(
   )
 
 add_subdirectory(models/robot)
+add_subdirectory(lib)
 add_subdirectory(tools)

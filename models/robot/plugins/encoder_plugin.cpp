@@ -29,6 +29,7 @@ void Encoder::Load(physics::ModelPtr model, sdf::ElementPtr sdf) {
 
 void Encoder::Update(const common::UpdateInfo& info) {
   msgs::EncoderMsg msg;
+  msg.set_timestamp(model->GetWorld()->GetSimTime().Float());
   msg.set_left_angle(left_joint->GetAngle(0).Radian());
   msg.set_right_angle(right_joint->GetAngle(0).Radian());
   msg.set_left_velocity(left_joint->GetVelocity(0));
@@ -36,6 +37,7 @@ void Encoder::Update(const common::UpdateInfo& info) {
 
   /*
   gzmsg << "Encoder message: " << std::endl
+        << "timestamp= " << msg.timestamp()
         << " left_angle=" << msg.left_angle()
         << " right_angle=" << msg.right_angle()
         << " left_velocity=" << msg.left_velocity()
