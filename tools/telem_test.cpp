@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#include "../lib/telem_interface.h"
+#include "telem_interface.h"
 
 int main(int argc, char** argv)
 {

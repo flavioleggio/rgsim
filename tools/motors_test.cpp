@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../lib/control_interface.h"
+#include "control_interface.h"
 
 int main(int argc, char** argv)
 {

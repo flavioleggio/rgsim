@@ -10,6 +10,7 @@ include_directories(
   ${GAZEBO_INCLUDE_DIRS}
   ${SDF_INCLUDE_DIRS}
   ${CMAKE_CURRENT_BINARY_DIR}/models/robot/msgs
+  lib
   )
 
 add_subdirectory(models/robot)
