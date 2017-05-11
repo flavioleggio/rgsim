@@ -8,8 +8,8 @@ void Encoder::Load(physics::ModelPtr model, sdf::ElementPtr sdf) {
   this->model = model;
 
   // Parse SDF properties
-  left_joint = model->GetJoint("left_wheel_hinge");
-  right_joint = model->GetJoint("right_wheel_hinge");
+  left_joint = model->GetJoint("left_encoder");
+  right_joint = model->GetJoint("right_encoder");
 
   topic = "~/encoders";
 
