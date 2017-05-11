@@ -15,7 +15,7 @@ TelemInterface::TelemInterface()
 
 void TelemInterface::print()
 {
-  printf("Timestamp = %f, Left ticks = %f, Right ticks = %f, Left velocity = %f, Right velocity = %f\n", \
+  printf("Timestamp = %f, Left ticks = %d, Right ticks = %d, Left velocity = %f, Right velocity = %f\n", \
           m_ts, m_left_ticks, m_right_ticks, m_left_velocity, m_right_velocity);
 }
 

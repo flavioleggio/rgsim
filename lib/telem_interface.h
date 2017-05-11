@@ -28,8 +28,8 @@ class TelemInterface {
     transport::SubscriberPtr sub;
 
     float m_ts;
-    float m_left_ticks;
-    float m_right_ticks;
+    int m_left_ticks;
+    int m_right_ticks;
     float m_left_velocity;
     float m_right_velocity;
 };
