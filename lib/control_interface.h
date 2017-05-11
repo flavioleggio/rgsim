@@ -11,6 +11,8 @@ using namespace gazebo;
 class ControlInterface {
   public:
     ControlInterface();
+    ~ControlInterface();
+
     void set_joint_torques(float left_signal, float right_signal);
 
   private:

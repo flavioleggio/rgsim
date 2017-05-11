@@ -13,6 +13,12 @@ TelemInterface::TelemInterface()
   sub = node->Subscribe("~/encoders", &TelemInterface::telemCallback, this);
 }
 
+TelemInterface::~TelemInterface()
+{
+  node->Fini();
+  sub->Unsubscribe();
+}
+
 void TelemInterface::get_sample(float* ts, int* left_ticks, int* right_ticks, float* left_velocity, float* right_velocity)
 {
   *ts = m_ts;

@@ -14,6 +14,7 @@ typedef const boost::shared_ptr<const msgs::EncoderMsg> ConstEncoderMsgPtr;
 class TelemInterface {
   public:
     TelemInterface();
+    ~TelemInterface();
 
     void get_sample(float* ts, int* left_ticks, int* right_ticks, float* left_velocity, float* right_velocity);
     void print();

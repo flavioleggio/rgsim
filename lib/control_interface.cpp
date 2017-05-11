@@ -11,6 +11,12 @@ ControlInterface::ControlInterface()
   pub->WaitForConnection();
 }
 
+ControlInterface::~ControlInterface()
+{
+  node->Fini();
+  pub->Fini();
+}
+
 void ControlInterface::set_joint_torques(float left_signal, float right_signal)
 {
   msgs::MotorsCommand msg;
