@@ -35,14 +35,5 @@ void Encoder::Update(const common::UpdateInfo& info) {
   msg.set_left_velocity(left_joint->GetVelocity(0));
   msg.set_right_velocity(right_joint->GetVelocity(0));
 
-  /*
-  gzmsg << "Encoder message: " << std::endl
-        << "timestamp= " << msg.timestamp()
-        << " left_angle=" << msg.left_angle()
-        << " right_angle=" << msg.right_angle()
-        << " left_velocity=" << msg.left_velocity()
-        << " right_velocity=" << msg.right_velocity() << std::endl;
-  */
-
   pub->Publish(msg);
 }

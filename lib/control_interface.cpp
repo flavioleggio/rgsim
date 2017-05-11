@@ -17,9 +17,8 @@ ControlInterface::~ControlInterface()
   pub->Fini();
 }
 
-void ControlInterface::set_joint_torques(float left_signal, float right_signal)
+void ControlInterface::set_joints_torques(float left_signal, float right_signal)
 {
-  msgs::MotorsCommand msg;
   msg.set_left_torque(left_signal);
   msg.set_right_torque(right_signal);
 

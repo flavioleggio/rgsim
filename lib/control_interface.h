@@ -13,14 +13,14 @@ class ControlInterface {
     ControlInterface();
     ~ControlInterface();
 
-    void set_joint_torques(float left_signal, float right_signal);
+    void set_joints_torques(float left_signal, float right_signal);
 
   private:
     // Topic to write motor commands to.
     std::string topic;
 
     // Command message to send to topic.
-    
+    msgs::MotorsCommand msg;
 
     // The node on which we're advertising.
     transport::NodePtr node;

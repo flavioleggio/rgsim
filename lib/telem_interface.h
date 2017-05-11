@@ -20,7 +20,12 @@ class TelemInterface {
     void print();
 
   private:
-    void telemCallback(const ConstEncoderMsgPtr& msg);
+    float m_ts;
+    int m_left_ticks;
+    int m_right_ticks;
+    float m_left_velocity;
+    float m_right_velocity;
+
     // Topic to read encoder signals from.
     std::string topic;
 
@@ -30,9 +35,6 @@ class TelemInterface {
     // Subscriber handle.
     transport::SubscriberPtr sub;
 
-    float m_ts;
-    int m_left_ticks;
-    int m_right_ticks;
-    float m_left_velocity;
-    float m_right_velocity;
+    // Function to call when a new message arrives on topic.
+    void telem_callback(const ConstEncoderMsgPtr& msg);
 };

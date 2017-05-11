@@ -10,7 +10,7 @@ TelemInterface::TelemInterface()
   transport::run();
   node = transport::NodePtr(new transport::Node());
   node->Init("rgsim");
-  sub = node->Subscribe("~/encoders", &TelemInterface::telemCallback, this);
+  sub = node->Subscribe("~/encoders", &TelemInterface::telem_callback, this);
 }
 
 TelemInterface::~TelemInterface()
@@ -34,7 +34,7 @@ void TelemInterface::print()
           m_ts, m_left_ticks, m_right_ticks, m_left_velocity, m_right_velocity);
 }
 
-void TelemInterface::telemCallback(const ConstEncoderMsgPtr& msg)
+void TelemInterface::telem_callback(const ConstEncoderMsgPtr& msg)
 {
   m_ts = msg->timestamp();
   m_left_ticks = msg->left_angle() * RESOLUTION / (2 * M_PI);

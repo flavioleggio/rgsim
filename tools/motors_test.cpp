@@ -9,7 +9,7 @@ int main(int argc, char** argv)
 
   while(1)
   {
-    ctl.set_joint_torques(0.001, 0.001);
+    ctl.set_joints_torques(0.001, 0.001);
     common::Time::MSleep(100);
   }
 }
